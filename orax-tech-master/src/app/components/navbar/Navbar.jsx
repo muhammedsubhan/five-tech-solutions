@@ -50,8 +50,8 @@ const Navbar = () => {
             </Link> */}
             <Image
               src="/logo.png"
-              width={250}
-              height={250}
+              width={300}
+              height={300}
               className="sm:w-[200px] "
               alt="logo"
             />

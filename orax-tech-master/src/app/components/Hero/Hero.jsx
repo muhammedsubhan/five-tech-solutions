@@ -9,6 +9,8 @@ import { BiLogoLinkedin } from "react-icons/bi";
 import { BiLogoInstagram } from "react-icons/bi";
 import { BiLogoDribbble } from "react-icons/bi";
 import Image from "next/image";
+import Link from "next/link";
+import { smoothScroll } from "../smooth/smoothScroll";
 
 const Hero = () => {
   const [text] = useTypewriter({
@@ -21,25 +23,55 @@ const Hero = () => {
     loop: true,
   });
 
+  const handleScrollToContact = (e) => {
+    e.preventDefault();
+    smoothScroll("contact");
+  };
+
   return (
     <div className="min-h-[700px]  px-5 sm:px-2 py-36 " id="home">
       <div className="flex justify-around items-center ">
         <div className="flex flex-col self-end pb-12 gap-5 sm:hidden">
-          <p className="text-2xl hover:text-blue-400 hover:scale-150 transition ease-in-out delay-75">
-            <AiOutlineTwitter />
-          </p>
-          <p className="text-2xl hover:text-blue-400 hover:scale-150 transition ease-in-out delay-75">
-            <BiLogoFacebook />
-          </p>
-          <p className="text-2xl hover:text-blue-400 hover:scale-150 transition ease-in-out delay-75">
-            <BiLogoLinkedin />
-          </p>
-          <p className="text-2xl hover:text-blue-400 hover:scale-150 transition ease-in-out delay-75">
-            <BiLogoInstagram />
-          </p>
-          <p className="text-2xl hover:text-blue-400 hover:scale-150 transition ease-in-out delay-75">
-            <BiLogoDribbble />
-          </p>
+          <Link
+            href="https://www.linkedin.com/in/sufyan-ahmed-web-development/"
+            target="_blank"
+          >
+            <p className="text-2xl hover:text-blue-400 hover:scale-150 transition ease-in-out delay-75">
+              <AiOutlineTwitter />
+            </p>
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/sufyan-ahmed-web-development/"
+            target="_blank"
+          >
+            <p className="text-2xl hover:text-blue-400 hover:scale-150 transition ease-in-out delay-75">
+              <BiLogoFacebook />
+            </p>
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/sufyan-ahmed-web-development/"
+            target="_blank"
+          >
+            <p className="text-2xl hover:text-blue-400 hover:scale-150 transition ease-in-out delay-75">
+              <BiLogoLinkedin />
+            </p>
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/sufyan-ahmed-web-development/"
+            target="_blank"
+          >
+            <p className="text-2xl hover:text-blue-400 hover:scale-150 transition ease-in-out delay-75">
+              <BiLogoInstagram />
+            </p>
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/sufyan-ahmed-web-development/"
+            target="_blank"
+          >
+            <p className="text-2xl hover:text-blue-400 hover:scale-150 transition ease-in-out delay-75">
+              <BiLogoDribbble />
+            </p>
+          </Link>
         </div>
         <div className="flex flex-col gap-10 items-start w-full py-6 px-24 lg:px-20 sm:px-1">
           <h1 className="text-4xl leading-normal lg:text-3xl sm:text-xl ">
@@ -57,12 +89,14 @@ const Hero = () => {
               <Cursor />
             </p>
           </div>
-          <button className="bg-sky-600 flex items-center gap-2 px-10 py-1.5 md:text-sm  rounded-full text-xl text-white">
-            Let's Talk{" "}
-            <span className="arrow-animation ">
-              <AiOutlineArrowRight />
-            </span>
-          </button>
+          <Link href="/#contact" onClick={handleScrollToContact}>
+            <button className="bg-sky-600 flex items-center gap-2 px-10 py-1.5 md:text-sm  rounded-full text-xl text-white">
+              Let's Talk
+              <span className="arrow-animation ">
+                <AiOutlineArrowRight />
+              </span>
+            </button>
+          </Link>
         </div>
         <div className="lg:hidden">
           <Image

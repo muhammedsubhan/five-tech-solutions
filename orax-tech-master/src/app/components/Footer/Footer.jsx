@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { BiLogoFacebook } from "react-icons/bi";
@@ -12,8 +13,8 @@ const Footer = () => {
       <div className="flex flex-col gap-10 py-10">
         <Image
           src="/logo.png"
-          width={250}
-          height={250}
+          width={300}
+          height={300}
           className="sm:w-[200px] "
           alt="logo"
         />
@@ -25,8 +26,8 @@ const Footer = () => {
             <h1 className="text-base font-semibold ">London</h1>
             <p>7 Bell yard London WC2A 2JR</p>
             <p className="font-normal">
-              <span className="text-base font-semibold">Phone</span> +44 757
-              7199355
+              <span className="text-base font-semibold">Phone</span> +92
+              3094109952
             </p>
           </div>
           <div className="flex flex-col gap-2">
@@ -34,26 +35,51 @@ const Footer = () => {
             <p>Johar Town, Lahore</p>
             <p className="font-normal">
               <span className="text-base font-semibold">Phone</span> +92
-              3094189983
+              3094109952
             </p>
           </div>
         </div>
         <div className="flex items-center gap-5">
-          <p className="text-2xl hover:text-blue-400 hover:scale-150 transition ease-in-out delay-75">
-            <AiOutlineTwitter />
-          </p>
-          <p className="text-2xl hover:text-blue-400 hover:scale-150 transition ease-in-out delay-75">
-            <BiLogoFacebook />
-          </p>
-          <p className="text-2xl hover:text-blue-400 hover:scale-150 transition ease-in-out delay-75">
-            <BiLogoLinkedin />
-          </p>
-          <p className="text-2xl hover:text-blue-400 hover:scale-150 transition ease-in-out delay-75">
-            <BiLogoInstagram />
-          </p>
-          <p className="text-2xl hover:text-blue-400 hover:scale-150 transition ease-in-out delay-75">
-            <BiLogoDribbble />
-          </p>
+          <Link
+            href="https://www.linkedin.com/in/sufyan-ahmed-web-development/"
+            target="_blank"
+          >
+            <p className="text-2xl hover:text-blue-400 hover:scale-150 transition ease-in-out delay-75">
+              <AiOutlineTwitter />
+            </p>
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/sufyan-ahmed-web-development/"
+            target="_blank"
+          >
+            <p className="text-2xl hover:text-blue-400 hover:scale-150 transition ease-in-out delay-75">
+              <BiLogoFacebook />
+            </p>
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/sufyan-ahmed-web-development/"
+            target="_blank"
+          >
+            <p className="text-2xl hover:text-blue-400 hover:scale-150 transition ease-in-out delay-75">
+              <BiLogoLinkedin />
+            </p>
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/sufyan-ahmed-web-development/"
+            target="_blank"
+          >
+            <p className="text-2xl hover:text-blue-400 hover:scale-150 transition ease-in-out delay-75">
+              <BiLogoInstagram />
+            </p>
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/sufyan-ahmed-web-development/"
+            target="_blank"
+          >
+            <p className="text-2xl hover:text-blue-400 hover:scale-150 transition ease-in-out delay-75">
+              <BiLogoDribbble />
+            </p>
+          </Link>
         </div>
       </div>
       <div className="grid-cols-3 grid md:grid md:grid-cols-3 gap-20 md:gap-8 sm:grid-cols-1">
