@@ -224,7 +224,7 @@ const ContactUs = () => {
               </div>
               <div className="flex w-full gap-10 py-10">
                 <Box className="flex w-full gap-10 sm:flex-col">
-                  <TextField
+                  {/* <TextField
                     id="standard-select-currency"
                     select
                     label="Subject"
@@ -241,8 +241,19 @@ const ContactUs = () => {
                         {option.label}
                       </MenuItem>
                     ))}
-                  </TextField>
+                  </TextField> */}
                   <TextField
+                    id="standard-basic"
+                    label="Subject"
+                    variant="standard"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleInputChange}
+                    className="w-full"
+                    error={!!errors.subject}
+                    helperText={errors.subject}
+                  />
+                  {/* <TextField
                     id="standard-select-currency"
                     select
                     label="Project Budget"
@@ -259,7 +270,18 @@ const ContactUs = () => {
                         {option.label}
                       </MenuItem>
                     ))}
-                  </TextField>
+                  </TextField> */}
+                  <TextField
+                    id="standard-basic"
+                    label="Project Budget"
+                    variant="standard"
+                    name="projectBudget"
+                    className="w-full"
+                    value={formData.projectBudget}
+                    onChange={handleInputChange}
+                    error={!!errors.projectBudget}
+                    helperText={errors.projectBudget}
+                  />
                 </Box>
               </div>
               <div className="mt-5">
